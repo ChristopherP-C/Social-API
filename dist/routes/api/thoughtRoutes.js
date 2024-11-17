@@ -9,6 +9,7 @@ router.route('/:thoughtId')
     .put(updateThought)
     .delete(deleteThought);
 router.route('/:thoughtId/reactions')
-    .post(createReaction)
+    .post(createReaction);
+router.route('/:thoughtId/reactions/:reactionId')
     .delete(removeReaction);
 export default router;
