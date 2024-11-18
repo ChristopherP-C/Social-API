@@ -18,7 +18,47 @@
   Copy the codebase into an empty file from which you would like to run the application. In your console, from the root folder of the application, run npm install to install the required packages.
 
   ## Usage
-  From your console, while in the root folder of the application, run "npm run start" After, use whatever API testing appliaction you prefer, Insomnia for instance, and connect to the local host created from the Social-API application. From there you can do a series of commands, such as getting, creating, updating, or deleting users, thoughts, and reactions.
+  From your console, while in the root folder of the application, run "npm run start" After, use whatever API testing appliaction you prefer, Insomnia for instance, and connect to the local host created from the Social-API application. From there you can do a series of commands, such as getting, creating, updating, or deleting users, thoughts, and reactions. The routes for users all start with api/users and are as follows:
+
+  router.route('/')
+  .get(getUsers)
+  .post(createUser);
+
+router.route('/:userId')
+    .get(getSingleUser)
+    .put(updateUser)
+    .delete(deleteUser);
+
+router.route('/:userId/friends/:friendId')
+    .post(addFriend)
+    .delete(removeFriend);
+
+
+the routes for thoughts all begin with api/thoughts and are as follows:
+
+router.route('/')
+  .get(getThoughts)
+  .post(createThought);
+
+router.route('/:thoughtId')
+    .get(getSingleThought)
+    .put(updateThought)
+    .delete(deleteThought);
+
+router.route('/:thoughtId/reactions')
+    .post(createReaction);
+
+router.route('/:thoughtId/reactions/:reactionId')
+    .delete(removeReaction);
+
+
+  ![get users](https://github.com/user-attachments/assets/888a82b3-4d8e-4e99-9d15-3fcb97b9ae78)
+
+
+
+  ![get thoughts](https://github.com/user-attachments/assets/7cba6b7f-3ddf-4e90-8071-5f1c198e1e6f)
+
+  
 
   ## Credits
   This application was made using
