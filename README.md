@@ -59,6 +59,10 @@ router.route('/:thoughtId/reactions/:reactionId')
 
   ![get thoughts](https://github.com/user-attachments/assets/7cba6b7f-3ddf-4e90-8071-5f1c198e1e6f)
 
+
+
+  Watch how to here ===> https://drive.google.com/file/d/1O3E-xVOoTHjU9vPPUGGwGL4L06-osSjH/view?usp=sharing
+
   
 
   ## Credits
