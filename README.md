@@ -34,7 +34,8 @@ router.route('/:userId/friends/:friendId')
     .delete(removeFriend);
 
 
-the routes for thoughts all begin with api/thoughts and are as follows:
+--- The routes for thoughts all begin with api/thoughts and are as follows:
+
 
 router.route('/')
   .get(getThoughts)
