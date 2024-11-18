@@ -5,7 +5,8 @@ import { Request, Response } from 'express';
   // Get all users
   export const getUsers = async (_req: Request, res: Response) => {
     try {
-      const users = await User.find();
+      const users = await User.find()
+      .populate('thoughts').populate('friends');
       res.json(users);
     } catch (err) {
       res.status(500).json(err);

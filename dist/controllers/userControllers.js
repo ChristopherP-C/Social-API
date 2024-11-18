@@ -2,7 +2,8 @@ import { User, Thought } from '../models/index.js';
 // Get all users
 export const getUsers = async (_req, res) => {
     try {
-        const users = await User.find();
+        const users = await User.find()
+            .populate('thoughts').populate('friends');
         res.json(users);
     }
     catch (err) {
